@@ -19,7 +19,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/', (req, res) => {
- return res.send('Bem vindo(a) a Api Diário Web 1.0.')
+    return res.send('Bem vindo(a) a Api Diário Web 1.0.')
 })
 
 const PORT = process.env.PORT || 3000;

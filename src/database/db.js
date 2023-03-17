@@ -9,7 +9,7 @@ const connectDb = () => {
 
   mongoose
     .connect(
-      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@diarioweb.6smc7se.mongodb.net/?retryWrites=true&w=majority`,
+      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@diarioweb.wgvybow.mongodb.net/?retryWrites=true&w=majority`,
       { useNewUrlParser: true, useUnifiedTopology: true }
     )
     .then(() => {
