@@ -4,6 +4,9 @@ import dotenv from "dotenv";
 
 import connectDb from "./src/database/db.js";
 
+import userRoute from "./src/routes/user.route.js";
+import authRoute from "./src/routes/auth.route.js";
+
 dotenv.config();
 
 const corsOptions = {
@@ -18,9 +21,9 @@ connectDb();
 app.use(cors(corsOptions));
 app.use(express.json());
 
-app.use('/', (req, res) => {
-    return res.send('Bem vindo(a) a Api Diário Web 1.0.')
-})
+
+app.use("/user", userRoute);
+app.use("/auth", authRoute);
 
 const PORT = process.env.PORT || 3000;
 
